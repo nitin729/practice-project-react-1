@@ -37,10 +37,12 @@ const AddUser = (props) => {
     setAddName("");
     setAddAge("");
   };
-
+  //Error Handler
   const errorHandler = () => {
     setError(null);
   };
+  //Delete User
+
   return (
     <>
       {error && (

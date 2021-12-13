@@ -13,10 +13,17 @@ function App() {
       ];
     });
   };
+
+  const deleteUserHandler = (userId) => {
+    setUsersList((prevUsersList) => {
+      return prevUsersList.filter((user) => user.id !== userId);
+    });
+  };
+
   return (
     <div>
       <AddUser onAddUser={addUserHandler} />
-      <DisplayUser users={usersList} />
+      <DisplayUser users={usersList} onDeleteUser={deleteUserHandler} />
     </div>
   );
 }
